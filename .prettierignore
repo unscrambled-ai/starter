@@ -1,0 +1,9 @@
+node_modules
+build
+dist
+coverage
+.git
+.vscode
+*.log
+package-lock.json
+*.min.js 

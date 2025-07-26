@@ -5,11 +5,16 @@
     "dev": "lightyear dev",
     "build": "lightyear build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "lightyear deploy prod"
+    "deploy": "lightyear deploy prod",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "main": "build/index.js",
   "dependencies": {
-    "@runlightyear/cli": "latest",
-    "@runlightyear/lightyear": "latest"
+    "@runlightyear/cli": "file:../lightyear/packages/@runlightyear/cli",
+    "@runlightyear/sdk": "file:../lightyear/packages/@runlightyear/sdk"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
   }
 }

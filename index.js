@@ -4,11 +4,8 @@
  * You should generally not need to edit this file.
  */
 
-import { handler, getDeployList } from "@runlightyear/lightyear";
+import { handler } from "@runlightyear/sdk";
 import "./src";
 
 exports.handler = handler;
 global.handler = handler;
-
-exports.getDeployList = getDeployList;
-global.getDeployList = getDeployList;
