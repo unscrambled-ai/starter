@@ -1,15 +1,16 @@
 {
-  "name": "lightyear-template",
-  "version": "1.0.0",
+  "name": "unscrambled-starter",
+  "version": "0.1.0",
   "scripts": {
-    "dev": "lightyear dev",
-    "build": "lightyear build",
+    "dev": "un dev",
+    "build": "un build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "lightyear deploy prod"
+    "deploy": "un deploy prod"
   },
   "main": "build/index.js",
   "dependencies": {
-    "@runlightyear/cli": "latest",
-    "@runlightyear/lightyear": "latest"
+    "@unscrambled/cli": "latest",
+    "@unscrambled/sdk": "latest",
+    "zod": "^4.0.17"
   }
 }

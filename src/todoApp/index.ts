@@ -1,34 +1,22 @@
 /**
- * This is the entry point for the TodoApp integration.
+ * Todo App integration entry point.
  *
- * It defines the custom app and the sync integration.
+ * Defines the custom app and the sync integration using the Unscrambled SDK builder API.
  */
 
-import {
-  defineCustomApp,
-  defineSyncIntegration,
-} from "@runlightyear/lightyear";
-import { TodoApp } from "./TodoApp";
+import { defineApiKeyCustomApp, defineIntegration } from "@unscrambled/sdk";
 import { taskManagement } from "../taskManagement";
 
-const customApp = defineCustomApp({
-  name: "todoApp",
-  title: "Todo App",
-  connector: TodoApp,
-});
+const todoApp = defineApiKeyCustomApp("todoApp")
+  .withTitle("Todo App")
+  .deploy();
 
-defineSyncIntegration({
-  name: "todoApp",
-  title: "Todo App",
-  customApp,
-  collection: taskManagement,
-  connector: (props) =>
-    new TodoApp({
-      ...props,
-      collectionName: "taskManagement",
-    }),
-  frequency: {
-    incremental: 1,
-    full: 15,
-  },
-});
+defineIntegration("todoApp")
+  .withTitle("Todo App")
+  .withCustomApp(todoApp)
+  .withCollection(taskManagement)
+  .withSyncSchedules({
+    incremental: { every: "1 minute" },
+    full: { every: "15 minutes" },
+  })
+  .deploy();

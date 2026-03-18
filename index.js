@@ -1,14 +1,14 @@
 /**
- * Set up the Lightyear handlers and import the project entry point.
+ * Set up the Unscrambled handlers and import the project entry point.
  *
  * You should generally not need to edit this file.
  */
 
-import { handler, getDeployList } from "@runlightyear/lightyear";
-import "./src";
+const { handler, getDeployList } = require("@unscrambled/sdk");
+require("./src");
 
 exports.handler = handler;
-global.handler = handler;
-
 exports.getDeployList = getDeployList;
+
+global.handler = handler;
 global.getDeployList = getDeployList;

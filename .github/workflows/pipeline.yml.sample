@@ -8,7 +8,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     env:
-      LIGHTYEAR_API_KEY: ${{ secrets.LIGHTYEAR_API_KEY }}
+      UNSCRAMBLED_API_KEY: ${{ secrets.UNSCRAMBLED_API_KEY }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
