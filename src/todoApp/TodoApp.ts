@@ -61,7 +61,7 @@ function mapStatusToApi(status: string): string {
 }
 
 export const todoApiConnector = new RestConnector({
-  baseUrl: "https://todo-api.lightyear.dev/api",
+  baseUrl: "https://todo-api.unscrambled.dev/api",
   headers: {
     "x-api-key": "{{ apiKey }}",
   },
