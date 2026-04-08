@@ -2,15 +2,15 @@
   "name": "unscrambled-starter",
   "version": "0.1.0",
   "scripts": {
-    "dev": "un dev",
-    "build": "un build",
+    "dev": "unscrambled dev",
+    "build": "unscrambled build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "un deploy prod"
+    "deploy": "unscrambled deploy prod"
   },
   "main": "build/index.js",
   "dependencies": {
-    "@unscrambled/cli": "latest",
-    "@unscrambled/sdk": "latest",
+    "@unscrambled/cli": "file:../unscrambled/packages/@unscrambled/cli",
+    "@unscrambled/sdk": "file:../unscrambled/packages/@unscrambled/sdk",
     "zod": "^4.0.17"
   }
 }

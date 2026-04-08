@@ -1,8 +1,11 @@
-/**
- * This is the entry point for the Unscrambled project.
- *
- * It imports all the collections and connectors that are used in the project.
- */
+import {
+  createRestConnector,
+  defineApiKeyCustomApp,
+} from "@unscrambled/sdk";
+import z from "zod";
 
-import "./taskManagement";
-import "./todoApp";
+
+export const granolaApp = defineApiKeyCustomApp("granola")
+  .withTitle("Granola")
+  .deploy();
+
